@@ -7,7 +7,7 @@ people = 3
 
 #step 2 and 3 write functin split_bill and add total and tip_rate parameter and return per-person values
 
-def split_bill(total, tip_rate=0.2):
+def split_bill(total, tip_rate=0.1):
     total_plus_tip = total + (total * tip_rate)
     per_person = total_plus_tip / people
     return per_person
@@ -16,7 +16,7 @@ def split_bill(total, tip_rate=0.2):
 #step 4 loop over a list of name and print it with each name with shared bills
 
 
-friends = ["Mohammed", "Amir", "Eliyas"] #list for 3 person name of my friend
+friends = ["Mohammed", "Amir", "Eliyas"] #list for 3 persons name of my friend
 
 
 
