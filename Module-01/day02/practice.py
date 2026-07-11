@@ -22,10 +22,15 @@ def discount_price(price, percent=10):
 
 count = 5
 
-while(count > 0):
-    print(f"{count} Liftoff!")
-    count -= 1
 
+
+while(count >= 0):
+    if(count == 0):
+        print("Liftoff")
+        break
+    print(f"{count}")
+    count -= 1
+    
 tempreture = temprature_label(10)
 
 discount = discount_price(200)
