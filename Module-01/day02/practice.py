@@ -17,8 +17,8 @@ for num in range(1, 20):
         print(num)
 
 
-def discount_price(price, persent=10):
-    return price - (price * persent / 100)
+def discount_price(price, percent=10):
+    return price - (price * percent / 100)
 
 count = 5
 
@@ -31,4 +31,9 @@ tempreture = temprature_label(10)
 discount = discount_price(200)
 
 print(tempreture)
-print(discount)
+
+#with Default
+print(f"with Default Test 10% {discount_price(200)}")
+
+#without default
+print(f"without Default Test and 50% {discount_price(200, 50)}")
