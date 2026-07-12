@@ -35,6 +35,6 @@ print("total even numbers:", result)
 
 if print_output_user_input == "y" or "Y":
     status = True
-
+#if user select filter this command runs
 if status:
     print(f"value is here {filter_evens(numbers)}")
