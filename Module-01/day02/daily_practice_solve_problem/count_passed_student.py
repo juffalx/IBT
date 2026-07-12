@@ -13,6 +13,7 @@ for i in grade_input.strip().split(","):
     
     grades.append(i)
 
+
 #print grade's
 print(grades)
 passed_Student = count_passed_students(grades)
