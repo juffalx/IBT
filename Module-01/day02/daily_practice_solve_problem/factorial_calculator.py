@@ -1,3 +1,5 @@
+#Factorial Calculator for daily problem 3
+
 user_number = int(input("please Enter Possitive Intiger number: "))
 
 def calculate_factorial(number):
