@@ -1,7 +1,7 @@
 # =====================================================
 # Mini Project - Pharmacy Inventory Tracker
 # IBT_WOW - Module 1 Practice 
-# I Tech 1.5 hour for this code and one don't update bug challenged me but only change empty dictionary to actucal read dictionary name, omg
+# I use 1.5 hour for this code and one don't update bug challenged me but only change empty dictionary to actucal read dictionary name, and other bug but after that rewritting with format take only 10 minute omg
 # =====================================================
 
 
@@ -20,7 +20,7 @@ def user_input():
         item_name, quantity = user_inputs.strip().split(",")
 
         # FIX:
-        # i don't convert to intiger so quantitiy is in string
+        # first bug i don't convert to intiger so quantitiy is in string
         quantity = int(quantity)
 
         return item_name.capitalize(), quantity
@@ -67,7 +67,7 @@ def adjust_stock(item, quantity, stock):
     # FIX:
     #Take 35 minute + for only updating uffff
     # If medicine exists:
-    #     increase quantity not Replaced
+    #     incrase not replace
     # Else:
     #     create new medicine
 
@@ -85,7 +85,7 @@ def stock_write(file_path, stock):
         with open(file_path, "w") as file:
 
             # FIX:
-            # my before fix problem code is 
+            # my before  code is 
             # file.write(stock)
             #
             #and this bug is very challenging i know the method but i don't know why i don't use
@@ -127,7 +127,7 @@ if item_name is not None:
 
     sorted_stock = sorted(
         stock.items(),
-        key=lambda item: item[1],
+        key=lambda item: item[1], # i use this b/c dics give only in key so .items give both and if we say item[0] this mean key and item[1] referve value b/c we want sorted by values not by key
         reverse=True
     )
 
