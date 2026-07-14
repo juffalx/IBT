@@ -1,0 +1,15 @@
+Paracetamol,120
+Amoxicillin,45
+Ibuprofen,2
+Metformin,60
+Vitamin C,150
+Insulin,25
+Omeprazole,40
+Cough Syrup,5
+Aspirin,180
+Ceftriaxone,15
+Glucose Test Strips,75
+Salbutamol Inhaler,18
+Diclofenac,3
+ORS Powder,110
+Azithromycin,35
