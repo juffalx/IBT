@@ -158,16 +158,21 @@ class BankConfig:
 
 
 
-class AccountFactory():
+class AccountFactory:
     @staticmethod
-    def create(kind, owner, number, balance=0, rate=0.05, overdraft_limit=10000):
+    def create(kind, owner, number, balance=0, rate=0, overdraft_limit=0):
+        config = BankConfig()
+
+        if rate == 0:
+            rate = config.interest_rate
+
+        if overdraft_limit == 0:
+            overdraft_limit = config.overdraft_limit
 
         if kind == "saving":
             return SavingAccount(owner, number, balance, rate)
-
         elif kind == "checking":
             return CheckingAccount(owner, number, balance, overdraft_limit)
-
         else:
             raise ValueError("Enter Valid Kind's")
 
