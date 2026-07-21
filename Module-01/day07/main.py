@@ -529,4 +529,5 @@ print(registry.find(1001).statement())
 for account in registry.list_all():
 
     print(account.statement())
+
     
