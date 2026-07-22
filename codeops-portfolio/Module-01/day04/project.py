@@ -77,4 +77,3 @@ if __name__ == "__main__":
     print("--- acc_2 remains unaffected ---")
     acc_2.statement()
 
-    #for stractured of code by check your self tasks 
