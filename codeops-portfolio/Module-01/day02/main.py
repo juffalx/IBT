@@ -5,6 +5,7 @@
 total_bill = 9300
 people = 3
 
+
 #step 2 and 3 write functin split_bill and add total and tip_rate parameter and return per-person values
 
 def split_bill(total, tip_rate=0.1):
