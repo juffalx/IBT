@@ -25,7 +25,7 @@ IBT/
 
 Each day generally contains:
 
-- `main.py` – Main lesson examples
+- `main.py` – in class excersice from Photo
 - `practice.py` – Practice exercises
 - `project.py` – Daily project
 - Additional files (notes, text files, exercises) when required
@@ -161,7 +161,7 @@ Topics covered:
 
 ---
 
-## Day 6 – Banking Project
+## Day 6 – Banking Project with OBB
 
 Practical banking system implementing concepts such as:
 
@@ -209,7 +209,7 @@ Topics covered:
 
 ---
 
-## Day 9 – Trees & Graphs
+## Day 9 – Trees  Graphs $ Heeps
 
 Topics covered:
 
