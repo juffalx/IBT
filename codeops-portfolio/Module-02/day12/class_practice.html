@@ -6,16 +6,93 @@
     <title>Document</title>
   </head>
   <body>
-    <fieldset>
-      <legend>Employee Field</legend>
-      <div>
-        <label name="firstname" for="firstname">FirstName: </label>
-        <input id="firstname>"
+    <!-- <fieldset>
+    <legend>Your Contact Form</legend>
+    <form action="" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"  placeholder="please Enter you name" required>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-        <br><br>
-        <label name="lastname" for="lastname">LastName: </label>
-        <input id="lastname" type="text" name="lastname" />
-      </div>
-    </fieldset>
+      <br><br>
+
+      <lable for="tel">Phone Number:</lable>
+      <input type="tel" id="tel" name="tel" required
+      pattern="09[0-9]{8}">
+      <br><br>
+      
+      <button type="submit">Submit</button>
+    </fieldset> -->
+    <table border="1">
+      <caption>
+        Company Contact Data
+      </caption>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th col="row" colspan="3" rowspan="2">Alfreds</th>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <img
+      width="50%"
+      height="50%"
+      src="https://qz.com/cdn-cgi/image/width=1920,quality=85,format=auto/https://assets.qz.com/media/8829c0e55f0522cea7b589fec420db88.jpg"
+      alt="best amazing Car"
+      loading="lazy"
+    />
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/5qap5aO4i9A"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      loading="lazy"
+      sandbox="allow-scripts"
+      allowfullscreen
+    ></iframe>
+
+    <video controls>
+      <source src="path/to/your/video.mp4" type="video/mp4" />
+
+      Your browser does not support the video tag.
+    </video>
+
+    <track
+      src="path/to/your/subtitles.vtt"
+      kind="subtitles"
+      srclang="en"
+      label="English"
+      default
+    />
+
+    <audio controls></audio>
   </body>
 </html>
