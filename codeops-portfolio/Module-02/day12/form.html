@@ -1,0 +1,87 @@
+<!-- 
+
+Mini-project (ships with the sheet)
+• Extend today's page into a two-page "Habesha Eatery" mini-site
+• Add a contact form and an opening-hours table
+• Run it through the W3C validator and fix every error -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reserve a table at Habesha Eatery and explore our traditional Ethiopian menu."
+    />
+    <title>Habesha Eatery reservation page</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Habesha Eatery</h1>
+    </header>
+
+    <main>
+      <section>
+        <form id="reservation" action="#" method="post">
+          <fieldset>
+            <legend>Reservation Form</legend>
+            <label for="name">Name: </label>
+            <input id="name" name="name" required />
+            <br /><br />
+            <label for="email">Email: </label>
+            <input id="email" name="email" type="email" required />
+            <br /><br />
+            <label for="tel">Phone: </label>
+            <input
+              id="tel"
+              name="tel"
+              type="tel"
+              required
+              pattern="0(7|9){1}[0-9]{8}"
+            />
+            <br /><br />
+            <label for="date">Date: </label>
+            <input id="date" name="date" type="date" required />
+            <br /><br />
+            <label for="party-size">Party Size: </label>
+            <input
+              id="party-size"
+              name="party-size"
+              type="number"
+              min="1"
+              max="20"
+              required
+            />
+            <br /><br />
+            <label for="special-requests">Special Requests: </label>
+            <textarea id="special-requests" name="special-requests"></textarea>
+            <br /><br />
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <table>
+        <caption>
+          Opening Hours
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Hours</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          ...
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <p>&copy; 2026 Habesha Eatery</p>
+    </footer>
+  </body>
+</html>

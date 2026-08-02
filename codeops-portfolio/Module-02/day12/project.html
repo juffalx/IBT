@@ -3,7 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Reserve a table at Habesha Eatery and explore our traditional Ethiopian menu."
+    />
+    <title>Habesha Eatery Reservation Page</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <h1>Habesha Eatery</h1>
+      <nav>
+        <a href="#reservation">Reservation Form</a>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <picture>
+          <img
+            src="asset/image/Habesha_image.png"
+            alt="A plate of Doro Wat served with Injera"
+          />
+        </picture>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d18744.34969589081!2d38.77736193880002!3d9.016776305855126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d9.038509699999999!2d38.7190091!4m3!3m2!1d9.0200599!2d38.8035147!5e0!3m2!1sen!2set!4v1785679419487!5m2!1sen!2set"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen
+          loading="lazy"
+          title="Habesha Eatery Location"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+
+        <form id="reservation" action="#" method="post">
+          <fieldset>
+            <legend>Reservation Form</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <br /><br />
+
+            <label for="tel">Phone:</label>
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              required
+              pattern="0[79][0-9]{8}"
+            />
+
+            <br /><br />
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+
+            <br /><br />
+
+            <label for="party-size">Party Size:</label>
+            <input
+              type="number"
+              id="party-size"
+              name="party-size"
+              min="1"
+              max="20"
+              required
+            />
+
+            <br /><br />
+
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests" name="special-requests"></textarea>
+
+            <br /><br />
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <table id="menu" border="1">
+        <caption>
+          Menu
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Dish</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price (ETB)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Injera with Doro Wat</td>
+            <td>Traditional Ethiopian flatbread with spicy chicken stew</td>
+            <td>150</td>
+          </tr>
+
+          <tr>
+            <td>Tibs</td>
+            <td>Sautéed meat with vegetables and spices</td>
+            <td>120</td>
+          </tr>
+
+          <tr>
+            <td>Shiro</td>
+            <td>Chickpea stew served with injera</td>
+            <td>100</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Habesha Eatery</p>
+    </footer>
+  </body>
 </html>

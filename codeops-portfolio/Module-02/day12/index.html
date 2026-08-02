@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Habesha Eatery — Traditional Ethiopian Restaurant &amp; Reservations
+    </title>
+    <meta
+      name="description"
+      content="Habesha Eatery is a traditional Ethiopian restaurant. Book a table online, browse our menu of authentic dishes, and find us on the map."
+    />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+      <h1>Habesha Eatery</h1>
+      <p>Authentic Ethiopian flavors, made fresh every day.</p>
+    </header>
+
+    <main id="main-content">
+      <!-- Reservation form -->
+      <section aria-labelledby="reservation-heading">
+        <h2 id="reservation-heading">Reserve a Table</h2>
+
+        <form action="/reservations" method="post">
+          <fieldset>
+            <legend>Reservation details</legend>
+
+            <p>
+              <label for="name">Name</label><br />
+              <input type="text" id="name" name="name" required />
+            </p>
+
+            <p>
+              <label for="tel">Phone Number</label><br />
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                required
+                pattern="09[0-9]{8}"
+                placeholder="09XXXXXXXX"
+                title="Enter a 10-digit phone number starting with 09, e.g. 0911121314"
+              />
+            </p>
+
+            <p>
+              <label for="guests">Number of Guests</label><br />
+              <input
+                type="number"
+                id="guests"
+                name="guests"
+                min="1"
+                max="20"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="date">Date</label><br />
+              <input type="date" id="date" name="date" required />
+            </p>
+          </fieldset>
+
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+
+      <!-- Menu -->
+      <section aria-labelledby="menu-heading">
+        <!--by using aria-labelleby give extra info  -->
+        <h2 id="menu-heading">Our Menu</h2>
+
+        <table>
+          <caption>
+            Habesha Eatery Menu — Prices in Ethiopian Birr (ETB)
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price (ETB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Doro Wat</th>
+              <td>
+                Slow-cooked chicken stew with berbere spice and boiled egg
+              </td>
+              <td>250</td>
+            </tr>
+            <tr>
+              <th scope="row">Beef Kebab</th>
+              <td>Marinated beef skewers, grilled and served with rice</td>
+              <td>300</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Hero image -->
+      <section aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Visit Us</h2>
+        <img
+          src="./asset/image/Habesha_image.png"
+          alt="Dining room at Habesha Eatery with traditional Ethiopian woven tables and seating"
+          loading="lazy"
+          width="800"
+          height="500"
+        />
+
+        <!-- Map -->
+        <h3>Find Us on the Map</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.4737479610308!2d38.79982797399605!3d9.020474489124455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b855cd643a691%3A0x5ce3922436b4f99a!2sMegenagna!5e0!3m2!1sen!2set!4v1785603530279!5m2!1sen!2set"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen
+          loading="lazy"
+          title="Google Map showing the location of Habesha Eatery"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Habesha Eatery. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
