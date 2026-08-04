@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #7c3aed;
+  --secondary-color: #ffffff;
+  --spacing-variable: 1rem;
+  --font-stack: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-variable);
+  font-family: var(--font-stack);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #5b21b6;
+}
+
+.wild-card {
+  width: 300px;
+  padding: 24px;
+  margin-top: 10px;
+  background-color: #c3cef1;
+  border: 2px solid var(--primary-color);
+}
+
+p {
+  background-color: black;
+}
+
+#parag-id {
+  background-color: aqua;
+}
+
+.parag-class {
+  background-color: blue;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #0f4c81;
+  color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.color-purple {
+  background-color: hsl(262, 83%, 58%);
+  color: white;
+}
+
+.color-purple:hover {
+  background-color: hsl(262, 83%, 68%);
+}
+
+.color-blue {
+  background-color: hsl(221, 83%, 53%);
+  color: white;
+}
+
+.color-blue:hover {
+  background-color: hsl(221, 83%, 63%);
+}
+
+.color-green {
+  background-color: hsl(142, 76%, 36%);
+  color: white;
+}
+
+.color-green:hover {
+  background-color: hsl(142, 76%, 46%);
+}

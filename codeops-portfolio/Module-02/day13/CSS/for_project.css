@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(262, 83%, 58%);
+  --primary-hover: hsl(262, 83%, 68%);
+  --secondary-color: #ffffff;
+  --card-color: #f4f4f4;
+  --text-color: #222;
+  --spacing-variable: 1rem;
+  --radius: 10px;
+  --font-stack: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  background-color: #eef2ff;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.card {
+  width: 360px;
+  margin: 50px auto;
+  padding: 24px;
+  background-color: var(--card-color);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: var(--primary-color);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-variable);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.tagline {
+  margin-top: 0;
+  margin-bottom: var(--spacing-variable);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-variable);
+  font-family: var(--font-stack);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
