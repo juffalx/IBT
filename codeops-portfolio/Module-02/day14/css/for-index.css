@@ -11,10 +11,6 @@ body {
   background: #f7f7f7;
 }
 
-/* -------------------------
-   Page Grid
-------------------------- */
-
 .page {
   min-height: 100vh;
   /*for full screen */
@@ -26,11 +22,9 @@ body {
     1fr
     auto;
 }
-
-/* -------------------------
-   Navbar for fflex box
-------------------------- */
-
+header {
+  margin-top: 50px;
+}
 .navbar {
   display: flex;
 
