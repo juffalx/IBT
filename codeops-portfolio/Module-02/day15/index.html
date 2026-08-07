@@ -3,7 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Habesha Eatery | Authentic Ethiopian Cuisine</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo">Habesha Eatery</h2>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Experience Authentic Ethiopian Flavors</h1>
+        <p class="hero-subtitle">
+          Handcrafted dishes made with tradition, passion, and fresh local
+          ingredients.
+        </p>
+        <a href="#reserve" class="btn-cta">Book a Table</a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>Our Story</h2>
+        <p>
+          Located in the heart of Addis Ababa, Habesha Eatery brings traditional
+          culinary techniques to life with rich spices, authentic injera, and
+          fresh ingredients.
+        </p>
+      </div>
+    </section>
+
+    <div class="page-layout container">
+      <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#menu">Traditional</a></li>
+          <li><a href="#menu">Breakfast</a></li>
+          <li><a href="#menu">Dinner</a></li>
+          <li><a href="#menu">Drinks</a></li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <section id="menu">
+          <h2>Our Menu</h2>
+          <div class="cards-grid">
+            <div class="card">
+              <span class="sale-badge">ETB Sale</span>
+              <h3>Doro Wat</h3>
+              <p>Traditional spicy chicken stew served with injera.</p>
+              <div class="price">300 ETB</div>
+            </div>
+
+            <div class="card">
+              <h3>Tibs</h3>
+              <p>Grilled beef with onions and peppers.</p>
+              <div class="price">280 ETB</div>
+            </div>
+
+            <div class="card">
+              <h3>Kitfo</h3>
+              <p>Minced beef mixed with Ethiopian spices.</p>
+              <div class="price">350 ETB</div>
+            </div>
+
+            <div class="card">
+              <h3>Shiro</h3>
+              <p>Ground chickpeas with Ethiopian spices.</p>
+              <div class="price">180 ETB</div>
+            </div>
+
+            <div class="card">
+              <h3>Misr Wot</h3>
+              <p>Red lentil stew cooked with Ethiopian berbere.</p>
+              <div class="price">280 ETB</div>
+            </div>
+
+            <div class="card">
+              <h3>Sambusa</h3>
+              <p>Crispy fried pastry stuffed with spiced lentils.</p>
+              <div class="price">100 ETB</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <h2>Photo Gallery</h2>
+          <div class="gallery">
+            <img src="images/aybe_begomen.png" alt="Ayibe Begomen" />
+            <img src="images/beyanet.png" alt="Beyaynet" />
+            <img src="images/dnch_wot.png" alt="Dinich Wot" />
+            <img src="images/misr_wot.png" alt="Misr Wot" />
+            <img src="images/sanbusa.png" alt="Sambusa" />
+          </div>
+        </section>
+
+        <section id="reserve" class="reservation-section">
+          <h2>Reserve a Table</h2>
+          <form class="reservation-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Mohammed Yasin"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="+251 91 123 4567"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Number of Guests</label>
+              <input
+                type="number"
+                id="guests"
+                name="guests"
+                min="1"
+                max="20"
+                value="2"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date & Time</label>
+              <input type="datetime-local" id="date" name="date" required />
+            </div>
+
+            <button type="submit" class="btn-submit">
+              Confirm Reservation
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content container">
+        <div class="footer-block">
+          <h3>Habesha Eatery</h3>
+          <p>Authentic Ethiopian Cuisine</p>
+        </div>
+        <div class="footer-block">
+          <h4>Location</h4>
+          <p>Bole Road, Near Friendship Center</p>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="footer-block">
+          <h4>Hours & Contact</h4>
+          <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+          <p>Phone: +251 11 612 3456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Habesha Eatery. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
