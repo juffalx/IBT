@@ -1,28 +1,27 @@
-// console.log("Hellow Worled!");
-
-// let num1 = 10;
-// let num2 = 20;
-
-// console.log(num1 + num2);
-
-// console.log(typeof num1);       
-
-
-// var name = "Mohammed Yasin"
-// console.log(`hello ${name}`)
-
-// console.log(1 < 1?"True": 2 < 3?"yes ":"False")
-
-
 'use strict';
-const billRaw = "800"; // from input
-const bill = Number(billRaw); // → number
+
+const bll = "800";
+const bill = Number(bll);
 const partySize = 4;
 
 const tip = bill > 300 ? bill * 0.10 : bill * 0.05;
 const total = bill + tip;
-const perPerson = total / partySize;
+
+let serviceFee = 0;
+
+switch ("TeleBirr") {
+  case "TeleBirr":
+    serviceFee = 5;
+    break;
+  case "CBE Birr":
+    serviceFee = 3;
+    break;
+}
+
+const finalTotal = total + serviceFee;
+const perPerson = finalTotal / partySize;
+
 console.log(
-`Total ${total} ETB, ` +
-`${perPerson} ETB each`
-); // "Total
+  `Total ${finalTotal} ETB, ` +
+  `${perPerson} ETB each`
+);
