@@ -1,0 +1,28 @@
+$ node app.js
+
+=== TeleBirr Transaction Report ===
+Almaz: -250 ETB (debit)
+Dawit: +600 ETB (credit)
+Tigist: -180 ETB (debit)
+Bereket: +900 ETB (credit)
+Selam: -75 ETB (debit)
+------------------------------------
+Total Credits: 1500 ETB
+Total Debits:  505 ETB
+Net Balance:   995 ETB
+
+--- Receipts only ---
+Almaz: -250 ETB (debit)
+Dawit: +600 ETB (credit)
+Tigist: -180 ETB (debit)
+Bereket: +900 ETB (credit)
+Selam: -75 ETB (debit)
+
+--- Totals only ---
+Debits: 505 ETB
+Credits: 1500 ETB
+
+--- Spread update demo ---
+Original: { id: 1, customer: 'Almaz', amount: 250, type: 'debit' }
+Corrected copy: { id: 1, customer: 'Almaz', amount: 300, type: 'debit' }
+Original unchanged? true
