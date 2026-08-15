@@ -1,82 +1,71 @@
 
+import { withVat, format } from "./pricing.js";
 
-import { addVat, VAT } from "./money.js";
+const orders = [
+  {
+    id: 1,
+    customer: "Almaz",
+    items: [
+      { name: "Teff (kg)", price: 60, qty: 5 },
+      { name: "Berbere", price: 120, qty: 1 },
+    ],
+  },
+  {
+    id: 2,
+    customer: "Sami",
+    items: [{ name: "Cooking oil (L)", price: 250, qty: 2 }],
+  },
+  {
+    id: 3,
+    customer: "Kidist",
+    items: [
+      { name: "Onions (kg)", price: 30, qty: 3 },
+      { name: "Tomatoes (kg)", price: 40, qty: 2 },
+    ],
+  },
+  {
+    id: 4,
+    customer: "Mame",
+    items: [{ name: "Sugar (kg)", price: 55, qty: 10 }],
+  },
+];
 
-console.log("========== Exercise 1 ==========");
+// reduce: total one order's items by destructuring { price, qty }
+const orderItemsTotal = (items) =>
+  items.reduce((sum, { price, qty }) => sum + price * qty, 0);
 
-{
-  const prices = [200, 450, 900, 1200, 75, 640];
-  const VAT_RATE = 0.15;
-
-  const pricesWithVat = prices.map((price) => price * (1 + VAT_RATE));
-  const under1000 = pricesWithVat.filter((price) => price < 1000);
-  const grandTotal = under1000.reduce((sum, price) => sum + price, 0);
-
-  console.log("Prices with VAT:", pricesWithVat);
-  console.log("Under 1000 ETB:", under1000);
-  console.log(`Grand Total: ${grandTotal.toFixed(2)} ETB`);
-}
-
-console.log("\n========== Exercise 2 ==========");
-
-{
-  const customer = {
-    name: "Selam",
-    city: "Addis Ababa",
-    balance: 3200,
+const ordersWithTotals = orders.map((order) => {
+  const itemsTotal = orderItemsTotal(order.items);
+  return {
+    ...order,
+    total: withVat(itemsTotal),
   };
+});
 
-  for (const [key, value] of Object.entries(customer)) {
-    console.log(`${key}: ${value}`);
-  }
+const bigOrders = ordersWithTotals.filter((order) => order.total > 500);
+
+const grandTotal = ordersWithTotals.reduce(
+  (sum, { total }) => sum + total,
+  0
+);
+
+console.log("=== Addis Market Order Summary ===");
+ordersWithTotals.forEach(({ id, customer, total }) => {
+  console.log(`Order #${id} — ${customer}: ${format(total)}`);
+});
+
+console.log("\n--- Orders over 500 ETB ---");
+if (bigOrders.length === 0) {
+  console.log("(none)");
+} else {
+  bigOrders.forEach(({ id, customer, total }) => {
+    console.log(`Order #${id} — ${customer}: ${format(total)}`);
+  });
 }
 
-console.log("\n========== Exercise 3 ==========");
+console.log(`\nGrand Total: ${format(grandTotal)}`);
 
-{
-  const customer = {
-    name: "Selam",
-    city: "Addis Ababa",
-    balance: 3200,
-  };
-
-  const { name, city } = customer;
-  console.log(`${name} lives in ${city}.`);
-
-  function greet({ name }) {
-    return `Hello, ${name}! Welcome to Addis Market.`;
-  }
-
-  console.log(greet(customer));
-}
-
-console.log("\n========== Exercise 4 ==========");
-
-{
-  const customer = {
-    name: "Selam",
-    city: "Addis Ababa",
-    balance: 3200,
-  };
-
-  const updatedCustomer = {
-    ...customer,
-    city: "Bahir Dar",
-    phone: "0912345678",
-  };
-
-  console.log("Original:", customer);
-  console.log("Updated:", updatedCustomer);
-  console.log(
-    "Original unchanged?",
-    customer.city === "Addis Ababa" && customer.phone === undefined
-  );
-}
-
-console.log("\n========== Exercise 5 ==========");
-
-{
-  console.log(`VAT rate: ${VAT * 100}%`);
-  console.log(`100 ETB with VAT: ${addVat(100).toFixed(2)} ETB`);
-  console.log(`250 ETB with VAT: ${addVat(250).toFixed(2)} ETB`);
-}
+console.log(
+  "\nOriginal order #1 has no 'total' field?",
+  orders[0].total === undefined
+);
