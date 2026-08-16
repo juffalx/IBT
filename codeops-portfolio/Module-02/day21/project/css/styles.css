@@ -1,0 +1,111 @@
+:root {
+  --bg: #f7f7f8;
+  --text: #1b1b1f;
+  --card: #ffffff;
+  --border: #d8d8dd;
+  --accent: #2f5fdd;
+  --error: #c42b2b;
+}
+
+[data-theme="dark"] {
+  --bg: #14151a;
+  --text: #e9e9ee;
+  --card: #1e1f26;
+  --border: #33343d;
+  --accent: #6f95ff;
+  --error: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+main {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#signup-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+input {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+#signup-form button[type="submit"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  color: var(--text);
+}
+
+.error {
+  min-height: 1.2em;
+  color: var(--error);
+  font-size: 0.9rem;
+  margin: 0.75rem 0 0;
+}
+
+.count {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+#entries {
+  padding-left: 1.1rem;
+}

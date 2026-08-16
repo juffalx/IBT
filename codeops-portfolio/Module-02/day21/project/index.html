@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Event Signup</h1>
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙 Dark mode</button>
+  </header>
+
+  <main>
+    <form id="signup-form" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="09xxxxxxxx or +2519xxxxxxxx" autocomplete="tel">
+      </div>
+
+      <button type="submit">Sign up</button>
+
+      <p id="error" class="error" role="alert"></p>
+    </form>
+
+    <p id="count" class="count"></p>
+
+    <section>
+      <h2>Signed up</h2>
+      <ul id="entries"></ul>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
