@@ -1,0 +1,76 @@
+:root {
+  --bg: #f7f7f8;
+  --text: #1b1b1f;
+  --card: #ffffff;
+  --border: #d8d8dd;
+  --error: #c42b2b;
+}
+
+[data-theme="dark"] {
+  --bg: #14151a;
+  --text: #e9e9ee;
+  --card: #1e1f26;
+  --border: #33343d;
+  --error: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+main {
+  max-width: 380px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#signup-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+input {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+button {
+  cursor: pointer;
+}
+.error {
+  color: var(--error);
+  min-height: 1.2em;
+  font-size: 0.9rem;
+}
+#count {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
