@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birr Watch</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Birr Watch</h1>
+        <p class="subtitle">Live ETB exchange rates</p>
+      </header>
+
+      <p id="status"></p>
+
+      <form id="convert-form" class="card">
+        <label for="amount">Amount (ETB)</label>
+        <div class="form-row">
+          <input
+            type="text"
+            id="amount"
+            placeholder="e.g. 500"
+            autocomplete="off"
+          />
+          <select id="currency"></select>
+        </div>
+        <button type="submit">Convert</button>
+      </form>
+
+      <p id="result"></p>
+
+      <div class="watchlist-section">
+        <div class="watchlist-header">
+          <h2>Watchlist</h2>
+          <button id="add-watch" type="button">+ Add current</button>
+        </div>
+        <ul id="watchlist"></ul>
+      </div>
+
+      <footer>
+        <p>Rates from open.er-api.com &middot; refreshes on page load</p>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
