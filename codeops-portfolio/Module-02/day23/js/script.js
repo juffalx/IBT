@@ -28,6 +28,8 @@ async function  loadMenu(){
 loadMenu()
 // loadMenu() for check if loadmenu is working
 
+
+
 function render(){
     // const term = state.search.toLowerCase();
     // search wst yalewn wede lower case qeyrot term lay yasqemtewal
