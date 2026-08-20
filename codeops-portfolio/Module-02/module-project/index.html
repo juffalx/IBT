@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addis Eats | Order Ethiopian Food Online</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="navbar container">
+        <h1 class="logo">Addis Eats</h1>
+
+        <div class="search-wrap">
+          <label for="search" class="visually-hidden">Search dishes</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search dishes…"
+            autocomplete="off"
+          />
+        </div>
+
+        <button
+          id="cart-toggle"
+          class="btn-cart-toggle"
+          aria-expanded="false"
+          aria-controls="cart"
+        >
+          🛒 Order
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="hero-title">Authentic Ethiopian Flavors, Delivered</h2>
+        <p class="hero-subtitle">
+          Browse the menu, build your order, and check out in ETB.
+        </p>
+      </div>
+    </section>
+
+    <main class="page-layout container">
+      <section id="menu" class="menu-section" aria-label="Menu">
+        <div class="menu-heading">
+          <h2>Our Menu</h2>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </div>
+        <div id="menu-grid" class="cards-grid"></div>
+      </section>
+
+      <aside id="cart" class="cart-panel" aria-label="Your order">
+        <h2>Your Order</h2>
+        <div id="cart-items" class="cart-items" aria-live="polite"></div>
+
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cart-total">0 ETB</span>
+        </div>
+
+        <form id="checkout-form" class="checkout-form" novalidate>
+          <h3>Checkout</h3>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Mohammed Yasin"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">TeleBirr Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="+251 9XX XXX XXX"
+              aria-describedby="phone-error"
+            />
+            <small
+              id="phone-error"
+              class="field-error"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Bole, Addis Ababa"
+            />
+          </div>
+
+          <button type="submit" class="btn-submit">Place Order</button>
+          <p id="order-confirm" class="order-confirm" aria-live="polite"></p>
+        </form>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content container">
+        <div class="footer-block">
+          <h3>Addis Eats</h3>
+          <p>Authentic Ethiopian Cuisine, delivered</p>
+        </div>
+        <div class="footer-block">
+          <h4>Location</h4>
+          <p>Bole Road, Near Friendship Center</p>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="footer-block">
+          <h4>Hours &amp; Contact</h4>
+          <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+          <p>Phone: +251 11 612 3456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Addis Eats. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
