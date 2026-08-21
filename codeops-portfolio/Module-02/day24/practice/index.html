@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 24 Practice - Checkout Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1>Checkout Form Practice</h1>
+
+    <form id="checkout" novalidate>
+      <label>
+        Name
+        <input id="name" required />
+      </label>
+
+      <label>
+        Phone (TeleBirr)
+        <input id="phone" placeholder="09xxxxxxxx" />
+      </label>
+
+      <label>
+        Delivery area
+        <select id="area">
+          <option>Bole</option>
+          <option>Kazanchis</option>
+          <option>Megenagna</option>
+        </select>
+      </label>
+
+      <p id="form-error" class="error" aria-live="polite"></p>
+
+      <button type="submit">Place order</button>
+    </form>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

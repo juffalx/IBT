@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 25 Practice - Demo and Review</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1>Demo Script</h1>
+    <ol>
+      <li>The problem: Addis Eats lets people browse an Ethiopian menu, build a cart, and order with a validated TeleBirr phone number.</li>
+      <li>Live walkthrough: search a dish, add it to the cart, change the quantity, then complete checkout.</li>
+      <li>One proud part: the whole app runs off one state object; every screen re-renders from it.</li>
+      <li>One hard bug: cart clicks on the quantity number did nothing, because the id was read from the wrong element; fixed with closest("[data-id]").</li>
+    </ol>
+
+    <h1>Peer Review Checklist</h1>
+    <ul id="checklist">
+      <li><label><input type="checkbox" /> Does it run without errors?</label></li>
+      <li><label><input type="checkbox" /> Is it responsive on mobile?</label></li>
+      <li><label><input type="checkbox" /> Are loading, empty and error states handled?</label></li>
+      <li><label><input type="checkbox" /> Is input validated?</label></li>
+      <li><label><input type="checkbox" /> Is the code readable and well named?</label></li>
+    </ul>
+    <p id="score"></p>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

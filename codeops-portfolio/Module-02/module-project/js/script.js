@@ -27,7 +27,7 @@ const phoneEl = document.querySelector("#phone");
 const phoneErrorEl = document.querySelector("#phone-error");
 const orderConfirmEl = document.querySelector("#order-confirm");
 
-// Ethiopian TeleBirr-style safari ጭምር numbers: 09XXXXXXXX or +2519XXXXXXXX / +2517XXXXXXXX
+// Ethiopian TeleBirr-style safari ጭምር numbers: 09 or +2519 / +2517
 const PHONE_PATTERN = /^(?:\+251|0)(9|7)\d{8}$/;
 
 //  Fetching & rendering the menu 
@@ -36,7 +36,9 @@ async function loadMenu() {
   try {
     const res = await fetch(API);
     if (!res.ok) throw new Error("HTTP " + res.status);
+
     state.dishes = await res.json();
+    
     statusEl.textContent = "";
     render();
   } catch (err) {
@@ -47,6 +49,7 @@ async function loadMenu() {
 
 function render() {
   const term = state.search.trim().toLowerCase(); // ፊልተሩ caseinsensetive እንዲሆን
+  
   const shown = state.dishes.filter((d) => 
     d.name.toLowerCase().includes(term)
   );
@@ -111,6 +114,7 @@ function cartTotal() {
 function escapeHtml(str) {
   const div = document.createElement("div");
   div.textContent = str ?? "";
+  // if str undiffiend or null use empty
   return div.innerHTML;
 }
 

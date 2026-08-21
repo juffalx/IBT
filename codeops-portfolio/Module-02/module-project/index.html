@@ -18,6 +18,7 @@
             type="search"
             placeholder="Search dishes…"
             autocomplete="off"
+            aria-label="Search dishes"
           />
         </div>
 
@@ -26,16 +27,21 @@
           class="btn-cart-toggle"
           aria-expanded="false"
           aria-controls="cart"
+          aria-label="Open your order cart"
         >
           🛒 Order
-          <span id="cart-count" class="cart-count">0</span>
+          <span id="cart-count" class="cart-count" aria-label="0 items in cart"
+            >0</span
+          >
         </button>
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h2 class="hero-title">Authentic Ethiopian Flavors, Delivered</h2>
+        <h2 id="hero-title" class="hero-title">
+          Authentic Ethiopian Flavors, Delivered
+        </h2>
         <p class="hero-subtitle">
           Browse the menu, build your order, and check out in ETB.
         </p>
@@ -48,7 +54,12 @@
           <h2>Our Menu</h2>
           <p id="status" class="status" role="status" aria-live="polite"></p>
         </div>
-        <div id="menu-grid" class="cards-grid"></div>
+        <div
+          id="menu-grid"
+          class="cards-grid"
+          aria-live="polite"
+          aria-label="Available dishes"
+        ></div>
       </section>
 
       <aside id="cart" class="cart-panel" aria-label="Your order">
@@ -57,7 +68,7 @@
 
         <div class="cart-total-row">
           <span>Total</span>
-          <span id="cart-total">0 ETB</span>
+          <span id="cart-total" aria-label="Order total">0 ETB</span>
         </div>
 
         <form id="checkout-form" class="checkout-form" novalidate>
@@ -71,6 +82,7 @@
               name="name"
               required
               placeholder="Mohammed Yasin"
+              autocomplete="name"
             />
           </div>
 
@@ -83,6 +95,8 @@
               required
               placeholder="+251 9XX XXX XXX"
               aria-describedby="phone-error"
+              autocomplete="tel"
+              inputmode="tel"
             />
             <small
               id="phone-error"
@@ -99,10 +113,17 @@
               name="address"
               required
               placeholder="Bole, Addis Ababa"
+              autocomplete="street-address"
             />
           </div>
 
-          <button type="submit" class="btn-submit">Place Order</button>
+          <button
+            type="submit"
+            class="btn-submit"
+            aria-label="Place your order"
+          >
+            Place Order
+          </button>
           <p id="order-confirm" class="order-confirm" aria-live="polite"></p>
         </form>
       </aside>
@@ -130,6 +151,6 @@
       </div>
     </footer>
 
-    <script src="./js/script.js"></script> -->
-     </body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

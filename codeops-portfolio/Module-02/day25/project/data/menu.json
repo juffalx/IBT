@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Doro Wat",
+    "category": "Main",
+    "price": 300,
+    "spicy": true,
+    "image": "images/logo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tibs",
+    "category": "Main",
+    "price": 280,
+    "spicy": true,
+    "image": "images/background-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "Kitfo",
+    "category": "Main",
+    "price": 350,
+    "spicy": true,
+    "image": "images/background-logo.png"
+  },
+  {
+    "id": 4,
+    "name": "Shiro",
+    "category": "Vegetarian",
+    "price": 180,
+    "spicy": false,
+    "image": "images/beyanet.png"
+  },
+  {
+    "id": 5,
+    "name": "Misr Wot",
+    "category": "Vegetarian",
+    "price": 280,
+    "spicy": true,
+    "image": "images/misr_wot.png"
+  },
+  {
+    "id": 6,
+    "name": "Alicha Wot",
+    "category": "Vegetarian",
+    "price": 260,
+    "spicy": false,
+    "image": "images/alcha_wot.png"
+  },
+  {
+    "id": 7,
+    "name": "Dinich Wot",
+    "category": "Vegetarian",
+    "price": 220,
+    "spicy": false,
+    "image": "images/dnch_wot.png"
+  },
+  {
+    "id": 8,
+    "name": "Ayibe Begomen",
+    "category": "Vegetarian",
+    "price": 240,
+    "spicy": false,
+    "image": "images/aybe_begomen.png"
+  },
+  {
+    "id": 9,
+    "name": "Beyaynet",
+    "category": "Vegetarian",
+    "price": 320,
+    "spicy": false,
+    "image": "images/beyanet.png"
+  },
+  {
+    "id": 10,
+    "name": "Sambusa",
+    "category": "Appetizer",
+    "price": 100,
+    "spicy": false,
+    "image": "images/sanbusa.png"
+  }
+]

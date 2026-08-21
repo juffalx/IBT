@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addis Eats</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="navbar container">
+        <h1 class="logo">Addis Eats</h1>
+        <input id="search" type="search" placeholder="Search dishes..." autocomplete="off" />
+        <button id="cart-toggle" aria-expanded="false" aria-controls="cart">
+          Cart <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>Authentic Ethiopian Flavors, Delivered</h2>
+      <p>Browse the menu, build your order, and check out in ETB.</p>
+    </section>
+
+    <main class="page-layout container">
+      <section id="menu" aria-label="Menu">
+        <h2>Our Menu</h2>
+        <p id="status" role="status" aria-live="polite"></p>
+        <div id="menu-grid" class="cards-grid"></div>
+      </section>
+
+      <aside id="cart" aria-label="Your order">
+        <h2>Your Order</h2>
+        <div id="cart-items" aria-live="polite"></div>
+
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cart-total">0 ETB</span>
+        </div>
+
+        <form id="checkout-form" novalidate>
+          <h3>Checkout</h3>
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Mohammed Yasin" />
+
+          <label for="phone">TeleBirr Phone</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+251 9XX XXX XXX" />
+          <small id="phone-error" aria-live="polite"></small>
+
+          <label for="address">Delivery Address</label>
+          <input type="text" id="address" name="address" required placeholder="Bole, Addis Ababa" />
+
+          <button type="submit">Place Order</button>
+          <p id="order-confirm" aria-live="polite"></p>
+        </form>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content container">
+        <div>
+          <h3>Addis Eats</h3>
+          <p>Authentic Ethiopian Cuisine, delivered</p>
+        </div>
+        <div>
+          <h4>Location</h4>
+          <p>Bole Road, Near Friendship Center</p>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div>
+          <h4>Hours &amp; Contact</h4>
+          <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+          <p>Phone: +251 11 612 3456</p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Addis Eats. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
