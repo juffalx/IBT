@@ -2,7 +2,7 @@
 // Pattern: state → render → events → (edit state) → render
 
 const API = "data/menu.json";
-const STORAGE_KEY = "addiseats-cart";
+const STORAGE_KEY = "addiseats-cart"; // save data in storage for reuse later
 
 //  Single source of truth 
 const state = {
@@ -114,7 +114,7 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-//  Persistence 
+//  Persistence for localstorate
 function saveCart() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state.cart));
 }
@@ -137,6 +137,7 @@ searchEl.addEventListener("input", (e) => {
 });
 
 //  Cart interactions (event delegation) 
+// dataset = custom data attributes
 menuGrid.addEventListener("click", (e) => {
   const btn = e.target.closest(".btn-add");
   if (!btn) return;
