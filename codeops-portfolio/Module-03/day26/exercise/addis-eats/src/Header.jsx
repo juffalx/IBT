@@ -4,9 +4,7 @@ import './Header.css'
 function Header(){
     return(
         <>
-        <Heads>
-            <h1>Tessst</h1>
-        </Heads>
+            <h1>Header For exercise</h1>
         </>
     )
 }
