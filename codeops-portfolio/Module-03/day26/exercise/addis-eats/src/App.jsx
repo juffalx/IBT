@@ -1,28 +1,16 @@
-import './App.css';
-
-const menu = [
-{ id: 1, name: "Doro Wat", price: 240 },
-{ id: 2, name: "Shiro", price: 120 },
-{ id: 3, name: "Tibs", price: 280 },
-];
-
-function Dish({id,name, price}){
-  return(
-  <div id={id}>
-    <h3>{name}</h3>
-    <p>{price}</p>
-  </div>
-)
-}
+import './App.css'
+import Header from './Component/Header/Header'
+import First from './Component/Main/First'
+import Footer from './Component/Footer/Footer'
 
 function App(){
-  return(
-  <>
-    {
-    menu.map((value) => 
-    <Dish name={value.name} price={value.price} id={value.id}/>)
-    }
-  </>
-  );
+    return(
+        <div className='containers' id='test'>
+            <Header/>
+            <First/>
+            <Footer/>
+        </div>
+    )
 }
-export default App;
+
+export default App
