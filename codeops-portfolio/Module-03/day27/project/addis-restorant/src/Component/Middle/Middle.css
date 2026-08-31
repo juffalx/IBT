@@ -1,0 +1,6 @@
+.middle-grid{
+    display: grid;
+    grid-template-columns:1fr 5fr;
+    gap: 12px;
+    background-color: lightblue;
+}

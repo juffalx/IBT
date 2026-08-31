@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  background-color: rgb(192, 107, 37);
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+/* 
+.cart {
+  background-color: tomato;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  border-radius: 20px;
+}
+
+.count{
+    text-align: center;
+    background-color: black;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 1.3rem;
+} */
