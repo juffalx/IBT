@@ -1,0 +1,18 @@
+.category-bar{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+.chip{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+}
+.chip.on{
+    background: #b5451b;
+    color: white;
+    border-color: #b5451b;
+}

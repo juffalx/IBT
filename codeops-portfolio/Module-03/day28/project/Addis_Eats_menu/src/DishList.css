@@ -1,0 +1,20 @@
+.dish-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+}
+.dish-card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+.dish-card h3{
+    margin: 0 0 4px 0;
+}
+.spicy{
+    color: #b5451b;
+    font-size: 12px;
+}
+.empty-state{
+    color: #777;
+}

@@ -1,0 +1,9 @@
+.menu-page{
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.order-total{
+    font-weight: bold;
+    margin-top: 14px;
+}
