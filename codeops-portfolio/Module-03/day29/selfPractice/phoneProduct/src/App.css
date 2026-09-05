@@ -1,0 +1,13 @@
+*,::Before,::after{
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.all-content{
+    background-color:aliceblue;
+    min-height:100vh;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    gap:12px;
+}
