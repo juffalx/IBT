@@ -1,0 +1,17 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.chip{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+}
+.chip.on{
+    background: #b5451b;
+    color: white;
+    border-color: #b5451b;
+}
