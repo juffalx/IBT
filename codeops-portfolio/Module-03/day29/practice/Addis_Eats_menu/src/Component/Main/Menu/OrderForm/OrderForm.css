@@ -1,0 +1,43 @@
+.order-form {
+  margin: 24px;
+  padding: 18px;
+  border: 1px solid #e0d8c3;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.order-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #1b4332;
+}
+
+.order-form input {
+  padding: 8px;
+  border: 1px solid #e0d8c3;
+  border-radius: 6px;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 0.8rem;
+}
+
+.order-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #d4a017;
+  color: white;
+  cursor: pointer;
+}
+
+.order-form button:disabled {
+  background-color: #d1c9b8;
+  cursor: not-allowed;
+}
