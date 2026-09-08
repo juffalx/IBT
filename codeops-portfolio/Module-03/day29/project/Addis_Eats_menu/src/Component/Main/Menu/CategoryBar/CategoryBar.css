@@ -1,0 +1,21 @@
+.category-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0 24px 16px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #e0d8c3;
+  background-color: #ffffff;
+  color: #1b4332;
+  cursor: pointer;
+}
+
+.chip-active {
+  background-color: #1b4332;
+  color: #ffffff;
+  border-color: #1b4332;
+}
