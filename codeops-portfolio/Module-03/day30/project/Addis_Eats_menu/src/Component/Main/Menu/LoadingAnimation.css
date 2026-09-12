@@ -1,0 +1,56 @@
+.loadinganimation {
+  background-color: red;
+  color: aqua;
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  /* transition-property: transform,color, border-radius; */
+  transition-duration: 4s;
+  /* transition-delay: 2s; */
+
+  transition-timing-function: ease-out;
+  margin: auto;
+  /* animation-name: mymove;
+  animation-duration: 2s;
+  animation-iteration-count: calc(5);
+  animation-direction: alternate;
+  animation-fill-mode: forwards; */
+
+  animation: mymove 2s ease-in-out 0.5s 5 alternate forwards;
+}
+
+.loadinganimation:hover {
+  /* color: red; */
+  /* transform: translatex(180px); */
+  /* transform: rotate(50deg); */
+  /* transform: scale(1.4); */
+  /* transform: skewx(35deg); */
+  /* transform-origin: top left; */
+  /* transform: translatex(180px) scale(1.4) rotate(3024deg) skewx(35deg); */
+  animation-play-state: paused;
+}
+
+@keyframes mymove {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 12%;
+  }
+  20% {
+    transform: rotate(50deg);
+    border-radius: 24%;
+  }
+  60% {
+    transform: rotate(180deg);
+    border-radius: 36%;
+  }
+  80% {
+    transform: rotate(270deg);
+    border-radius: 48%;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    color: aqua;
+    border-top-left-radius: rgb(60, 255, 0);
+  }
+}
