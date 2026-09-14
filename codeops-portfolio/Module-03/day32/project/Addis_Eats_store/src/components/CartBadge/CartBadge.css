@@ -1,0 +1,19 @@
+.cart-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: var(--green-700);
+  color: #ffffff;
+}
+
+.cart-badge__count {
+  min-width: 28px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: var(--gold-500);
+  color: var(--green-900);
+  font-weight: bold;
+  text-align: center;
+}
