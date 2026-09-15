@@ -1,0 +1,8 @@
+:root[data-theme='dark'] {
+  --cream: #14211b;
+  --surface: #1e2d25;
+  --border: #34493e;
+  --text: #e8efe9;
+  --muted: #a3b3a9;
+  --danger-bg: #3a1d1a;
+}
