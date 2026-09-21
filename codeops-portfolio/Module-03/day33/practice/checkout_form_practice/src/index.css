@@ -1,0 +1,41 @@
+:root {
+  --gold-500: #d4a017;
+  --border: #e0d8c3;
+  --surface: #ffffff;
+  --text: #263238;
+  --muted: #6b7280;
+  --danger: #b42318;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background-color: #f7f3e8;
+}
+
+.page {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.form__error {
+  margin: 0;
+  color: var(--danger);
+  font-weight: bold;
+}
+
+.button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--gold-500);
+  color: #ffffff;
+  font: inherit;
+}
