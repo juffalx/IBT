@@ -1,89 +1,42 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from 'react-router-dom';
-import { Navbar } from './Component/Navbar';
-import { DishList } from './Component/DishList';
-import { CheckoutForm } from './Component/CheckoutForm';
-import { useCartStore } from './store/useCartStore';
-import { useAuthStore } from './store/useAuthStore';
-// Simple Cart View Component
-const CartView = () => {
-  const { cart, removeFromCart, clearCart } = useCartStore();
-  const navigate = useNavigate();
+import { lazy, Suspense } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Layout from './Layout';
+import ErrorBoundary from './ErrorBoundary';
+import './App.css';
 
-  if (cart.length === 0) {
-    return <div className="empty-state">Your cart is empty.</div>;
-  }
+const TodaySpecial = lazy(() => import('./Component/TodaySpecial/TodaySpecial'));
+const FullMenu = lazy(() => import('./Component/FullMenu/FullMenu'));
+const CurrentOrderCart = lazy(() => import('./Component/CurrentOrderCart/CurrentOrderCart'));
+const CheckoutDelivery = lazy(() => import('./Component/CheckoutDelivery/CheckoutDelivery'));
+const Login = lazy(() => import('./Component/Login/Login'));
+const Signup = lazy(() => import('./Component/Signup/Signup'));
+const NotFound404 = lazy(() => import('./Component/NotFound404/NotFound404'));
 
-  const totalPrice = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+function PageLoader() {
+  return <div className="loading-state">Loading Mesob House...</div>;
+}
 
+function App() {
   return (
-    <div className="cart-view">
-      <h2>Your Cart</h2>
-      {cart.map((item) => (
-        <div key={item.id} className="cart-item">
-          <span>
-            {item.name} (x{item.quantity})
-          </span>
-          <span>{item.price * item.quantity} ETB</span>
-          <button onClick={() => removeFromCart(item.id)}>Remove</button>
-        </div>
-      ))}
-      <h3>Total: {totalPrice} ETB</h3>
-      <button onClick={clearCart}>Clear Cart</button>
-      <button onClick={() => navigate('/checkout')}>Proceed to Checkout</button>
-    </div>
-  );
-};
-
-// Order Success Component
-const OrderSuccess = () => (
-  <div className="success-state">
-    <h2>Order Placed Successfully!</h2>
-    <p>Thank you for ordering with Addis Eats. Your food is on the way!</p>
-  </div>
-);
-
-// Login Component placeholder
-const LoginView = () => {
-  const login = useAuthStore((state) => state.login);
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    login({ name: 'Test User', email: 'user@addiseats.com' });
-    navigate('/');
-  };
-
-  return (
-    <div className="login-view">
-      <h2>Login to Addis Eats</h2>
-      <button onClick={handleLogin}>Simulate Login</button>
-    </div>
-  );
-};
-
-export default function App() {
-  return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
+    <BrowserRouter>
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
           <Routes>
-            <Route path="/" element={<DishList />} />
-            <Route path="/cart" element={<CartView />} />
-            <Route path="/checkout" element={<CheckoutForm />} />
-            <Route path="/order-success" element={<OrderSuccess />} />
-            <Route path="/login" element={<LoginView />} />
+            <Route element={<Layout />}>
+              <Route index element={<TodaySpecial />} />
+              <Route path="menu" element={<FullMenu />} />
+              <Route path="orderCart" element={<CurrentOrderCart />} />
+              <Route path="Delibery" element={<CheckoutDelivery />} />
+              <Route path="login" element={<Login />} />
+              <Route path="signup" element={<Signup />} />
+              <Route path="404" element={<NotFound404 />} />
+              <Route path="*" element={<Navigate to="/404" replace />} />
+            </Route>
           </Routes>
-        </main>
-      </div>
-    </Router>
+        </Suspense>
+      </ErrorBoundary>
+    </BrowserRouter>
   );
 }
+
+export default App;
