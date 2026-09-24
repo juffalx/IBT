@@ -4,10 +4,18 @@ import Layout from './Layout';
 import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
-const TodaySpecial = lazy(() => import('./Component/TodaySpecial/TodaySpecial'));
+const TodaySpecial = lazy(
+  () => import('./Component/TodaySpecial/TodaySpecial')
+);
+
+const RoyalDish = lazy(() => import('./Component/RoyalDish/RoyalDish'));
 const FullMenu = lazy(() => import('./Component/FullMenu/FullMenu'));
-const CurrentOrderCart = lazy(() => import('./Component/CurrentOrderCart/CurrentOrderCart'));
-const CheckoutDelivery = lazy(() => import('./Component/CheckoutDelivery/CheckoutDelivery'));
+const CurrentOrderCart = lazy(
+  () => import('./Component/CurrentOrderCart/CurrentOrderCart')
+);
+const CheckoutDelivery = lazy(
+  () => import('./Component/CheckoutDelivery/CheckoutDelivery')
+);
 const Login = lazy(() => import('./Component/Login/Login'));
 const Signup = lazy(() => import('./Component/Signup/Signup'));
 const NotFound404 = lazy(() => import('./Component/NotFound404/NotFound404'));
@@ -22,15 +30,20 @@ function App() {
       <ErrorBoundary>
         <Suspense fallback={<PageLoader />}>
           <Routes>
-            <Route element={<Layout />}>
+            <Route path="/" element={<Layout />}>
               <Route index element={<TodaySpecial />} />
-              <Route path="menu" element={<FullMenu />} />
-              <Route path="orderCart" element={<CurrentOrderCart />} />
-              <Route path="Delibery" element={<CheckoutDelivery />} />
-              <Route path="login" element={<Login />} />
               <Route path="signup" element={<Signup />} />
-              <Route path="404" element={<NotFound404 />} />
-              <Route path="*" element={<Navigate to="/404" replace />} />
+              <Route path="login" element={<Login />} />
+              <Route path="menu" element={<FullMenu />} />
+              <Route path="/menu/:id" element={<RoyalDish />} />{' '}
+              <Route path="future" element={<TodaySpecial />} />
+              <Route path="orderCart" element={<CurrentOrderCart />} />
+              <Route path="delivery" element={<CheckoutDelivery />} />
+              <Route
+                path="Delibery"
+                element={<Navigate to="/delivery" replace />}
+              />
+              <Route path="*" element={<NotFound404 />} />
             </Route>
           </Routes>
         </Suspense>
