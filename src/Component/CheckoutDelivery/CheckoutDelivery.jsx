@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useShallow } from 'zustand/react/shallow';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -42,7 +43,7 @@ const defaultValues = {
 };
 
 function CheckoutDelivery() {
-  const cart = useCartStore(selectCart);
+  const cart = useCartStore(useShallow(selectCart));
   const clearCart = useCartStore((state) => state.clearCart);
   const [verified, setVerified] = useState(false);
   const [verifying, setVerifying] = useState(false);
