@@ -6,40 +6,14 @@ import CategoryBar from './CategoryBar/CategoryBar';
 import OrderForm from './OrderForm/OrderForm';
 import { categories } from './data';
 import { searchChannel } from '../../../App';
+import { useFetch } from '../../../Fetch/FetchData';
 
 const API = 'data.json';
 
 function Products({ onAdd }) {
+  const { dishes, loading, error } = useFetch(API);
   const { query } = useContext(searchChannel);
   const [category, setCategory] = useState('All');
-  const [dishes, setDishes] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const ctrl = new AbortController();
-
-    async function loadData() {
-      try {
-        const res = await fetch(API, { signal: ctrl.signal });
-        if (!res.ok) {
-          throw new Error(`Http Error: ${res.status}`);
-        }
-        setDishes(await res.json());
-      } catch (error) {
-        if (error.name !== 'AbortError') {
-          setError(error.message);
-        }
-      } finally {
-        setLoading(false);
-      }
-    }
-    loadData();
-
-    return () => ctrl.abort();
-  }, []);
-
-  // Filter by Category first, then by Search Query
   const filteredDishes = dishes.filter((item) => {
     const matchesCategory = category === 'All' || item.category === category;
     const matchesQuery = item.name
@@ -53,9 +27,9 @@ function Products({ onAdd }) {
     document.title = `Total ${filteredDishes.length} Dishes`;
   }, [filteredDishes.length]);
 
+  // useEffect(() => console.log('dishe is ', loading), []);
   if (loading) return <p>Loading Data</p>;
   if (error) return <p>Error happen {error}</p>;
-
   return (
     <div className="dish-grid">
       <h3 className="menu">Products Menu</h3>

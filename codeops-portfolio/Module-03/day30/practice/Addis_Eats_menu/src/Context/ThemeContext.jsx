@@ -1,9 +1,20 @@
-import React from 'react'
+import { createContext, useState } from 'react';
+export const ThemeChannel = createContext();
 
-function ThemeContext() {
+function ThemeContext({ children }) {
+  const [theme, setTheme] = useState('light');
+
   return (
-    <div>ThemeContext</div>
-  )
+    <ThemeChannel.Provider
+      value={{
+        theme,
+        togletheme: () => (theme === 'light' ? 'dark' : 'light'),
+        setTheme,
+      }}
+    >
+      {children}
+    </ThemeChannel.Provider>
+  );
 }
 
-export default ThemeContext
+export default ThemeContext;
