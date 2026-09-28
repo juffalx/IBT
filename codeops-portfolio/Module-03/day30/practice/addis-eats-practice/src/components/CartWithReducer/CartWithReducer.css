@@ -1,0 +1,14 @@
+.cart-with-reducer {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--surface);
+}
+
+.cart-with-reducer__title {
+  margin: 0;
+  color: var(--green-900);
+}

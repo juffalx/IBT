@@ -1,0 +1,11 @@
+.dish-count {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--surface);
+}
+
+.dish-count__title {
+  margin: 0 0 8px;
+  color: var(--green-900);
+}
