@@ -1,0 +1,12 @@
+.nested-panel {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}
+
+.nested-panel__label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}

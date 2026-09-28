@@ -1,0 +1,8 @@
+.theme-toggle {
+  justify-self: start;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--green-700);
+  color: #ffffff;
+}

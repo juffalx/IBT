@@ -1,35 +1,27 @@
-import './App.css';
-import { useEffect, useState, createContext, useMemo, useContext } from 'react';
-import Header from './Component/Header/Header';
-import Midle from './Component/Main/Midle';
-import Footer from './Component/Footer/Footer';
-export const searchChannel = createContext(null);
-import ThemeContext from './Context/ThemeContext';
+import { useState } from 'react'
+import './App.css'
+import { EXERCISES } from './pages/exercises'
+import ExerciseNav from './components/ExerciseNav/ExerciseNav'
 
 function App() {
-  const [cartCount, setCartCount] = useState(0);
-  const [orderTotal, setOrderTotal] = useState(0);
-  const [query, setQuery] = useState('');
-  const searchProviderValue = useMemo(() => ({ query, setQuery }), [query]);
-
-  // useEffect(() => console.log('theme is in app.jsx', theme), []);
-
-  function handleAdd(price) {
-    setOrderTotal((total) => total + price);
-    setCartCount((c) => c + 1);
-  }
+  const [activeId, setActiveId] = useState(EXERCISES[0].id)
+  const { Page } = EXERCISES.find((exercise) => exercise.id === activeId)
 
   return (
-    <div className="containers" id="test" style={{ backgrond: 'red' }}>
-      <ThemeContext>
-        <searchChannel.Provider value={searchProviderValue}>
-          <Header cartCount={cartCount} orderTotal={orderTotal} />
-          <Midle onAdd={handleAdd} />
-          <Footer />
-        </searchChannel.Provider>
-      </ThemeContext>
+    <div className="app">
+      <header className="app__header">
+        <h1 className="app__title">Day 30 Practice: Hooks Deep Dive</h1>
+        <ExerciseNav
+          exercises={EXERCISES}
+          activeId={activeId}
+          onSelect={setActiveId}
+        />
+      </header>
+      <main className="app__main">
+        <Page />
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
