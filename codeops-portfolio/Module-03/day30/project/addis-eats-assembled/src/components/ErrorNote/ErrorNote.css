@@ -1,0 +1,9 @@
+.error-note {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--danger);
+  border-radius: 10px;
+  background-color: var(--danger-bg);
+  color: var(--danger);
+}

@@ -1,0 +1,38 @@
+.category-filter {
+  padding: 20px;
+  background-color: var(--green-700);
+  color: #ffffff;
+}
+
+.category-filter__title {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.category-filter__list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-filter__button {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #ffffff;
+  text-align: left;
+}
+
+.category-filter__button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.category-filter__button--active {
+  border-color: var(--gold-500);
+  background-color: var(--green-900);
+  font-weight: bold;
+}
