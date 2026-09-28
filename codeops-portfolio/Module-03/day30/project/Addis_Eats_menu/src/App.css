@@ -1,7 +1,5 @@
-.containers {
+.app {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 12px;
-  background-color: #f7f3e8;
 }
