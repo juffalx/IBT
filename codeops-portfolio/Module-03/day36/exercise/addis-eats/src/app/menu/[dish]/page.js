@@ -1,0 +1,23 @@
+import { notFound } from 'next/navigation';
+const DishList = [
+  { id: 'shiro', name: 'Shiro', price: 100 },
+  { id: 'kitfo', name: 'Kitfo', price: 200 },
+  { id: 'doro', name: 'Doro', price: 300 },
+];
+
+const MenuDish = async ({ params }) => {
+  const { dish } = await params;
+  const show = DishList.find((d) => d.id === dish);
+
+  if (!show) {
+    notFound();
+  }
+  return (
+    <div>
+      <h1>Name:{show.name}</h1>
+      <p>Prive: {show.price}</p>
+    </div>
+  );
+};
+
+export default MenuDish;
