@@ -6,6 +6,8 @@ const DishList = [
 ];
 
 const MenuDish = async ({ params }) => {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const { dish } = await params;
   const show = DishList.find((d) => d.id === dish);
 
