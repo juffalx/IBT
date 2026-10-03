@@ -12,6 +12,7 @@ const MenuDish = async ({ params }) => {
   const show = DishList.find((d) => d.id === dish);
 
   if (!show) {
+    throw new Error('Dish not found');
     notFound();
   }
   return (

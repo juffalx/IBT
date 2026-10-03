@@ -1,4 +1,4 @@
-'use client';git 
+'use client';
 const Error = () => {
   return <div>Something went wrong!</div>;
 };
