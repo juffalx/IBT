@@ -13,7 +13,7 @@ const MenuDish = async ({ params }) => {
 
   if (!show) {
     throw new Error('Dish not found');
-    notFound();
+    // if(res.ok === 404){notFound();}
   }
   return (
     <div>

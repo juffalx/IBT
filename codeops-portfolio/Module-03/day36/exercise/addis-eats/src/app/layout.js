@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from 'next/font/google'; // ሁለት ፎንት import ሲሆን
 import './globals.css'; //Geist_Mono ግሎባል የሆን css ነው
-
+import Header from '../component/Header'; //Header ኮምፖነንት
+import Footer from '../component/Footer'; //Footer ኮምፖነንት
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -24,13 +25,13 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <header>
-          <h1>MY ADDIS EATS HEADER</h1>
+          <Header/>
         </header>
 
         {children}
 
         <footer>
-          <p>MY FOOTER</p>
+          <Footer/>
         </footer>
       </body>
     </html>
