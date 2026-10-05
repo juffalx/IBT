@@ -1,14 +1,17 @@
+import { CATEGORIES } from '../../data/dishes'
+
 export default function MenuLayout({ children }) {
   return (
-    <div>
-      <aside className="grid grid-rows-4g text-center bg-yellow-100 p-4 rounded-lg shadow-md text">
-        <h2>Menu Categories</h2>
-        <p>Breakfast</p>
-        <p>Main Dishes</p>
-        <p>Drinks</p>
+    <div className="flex gap-6 p-6">
+      <aside className="w-48 rounded-lg bg-yellow-100 p-4 shadow-md">
+        <h2 className="mb-2 font-bold">Menu Categories</h2>
+        <ul className="grid gap-1">
+          {CATEGORIES.map((category) => (
+            <li key={category}>{category}</li>
+          ))}
+        </ul>
       </aside>
-
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
     </div>
-  );
+  )
 }
