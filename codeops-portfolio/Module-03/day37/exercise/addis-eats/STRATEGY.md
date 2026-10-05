@@ -6,7 +6,7 @@ For every route two questions: does it depend on who is asking, and how stale ma
 | --- | --- | --- |
 | `/` | Static | The welcome text never changes between builds |
 | `/menu` | ISR, `revalidate = 3600` | Dishes change a few times a day, so an hour old is fine and speed matters most |
-| `/menu/[id]` | Static via `generateStaticParams` | Every dish id is known at build time, and `dynamicParams = false` makes an unknown id a real 404 |
+| `/menu/[id]` | Static via `generateStaticParams` | The ids are known at build time: one page per dish and one per category. `dynamicParams = false` makes anything else a real 404 |
 | `/cart` | Client (`'use client'`) | The cart is the person's own state and private |
 | `/checkout` | Dynamic | Reads the `session` cookie with `cookies()`, and `checkout/layout.js` also sets `dynamic = 'force-dynamic'` for everything under it |
 | `/docs/[[...slug]]` | Dynamic | Optional catch-all with no `generateStaticParams`, so the build cannot know the paths |
@@ -21,7 +21,7 @@ For every route two questions: does it depend on who is asking, and how stale ma
 
 - `app/layout.js` owns `html` and `body`, imports `globals.css` and renders the header, the page and the footer
 - `app/menu/layout.js` adds the category sidebar for every route under `/menu`. It stays mounted when you go from `/menu` to `/menu/kitfo`, so only the page changes
-- The sidebar categories are plain text on purpose: turning them into `?category=` links would need `searchParams`, which makes `/menu` dynamic and loses the static speed
+- The sidebar categories link to `/menu/breakfast`, `/menu/main-dishes` and `/menu/drinks`. They are path segments, not `?category=`, because `searchParams` would make the route dynamic and lose the static speed
 
 ## Streaming
 
@@ -43,7 +43,7 @@ Route (app)                Revalidate  Expire
 │ ├ ● /menu/firfir
 │ ├ ● /menu/chechebsa
 │ ├ ● /menu/doro-wat
-│ └ ● [+4 more paths]
+│ └ ● [+7 more paths]
 ├ ○ /order/history
 ├ ○ /products
 ├ ○ /products/electronics
@@ -56,5 +56,5 @@ Route (app)                Revalidate  Expire
 ```
 
 - ○ Static: `/`, `/cart`, `/menu` (revalidates every 1h), `/order/history`, `/products`, `/products/electronics`, `/test`
-- ● SSG: `/menu/[id]`, 7 pages, one per dish
+- ● SSG: `/menu/[id]`, 10 pages: 7 dishes and 3 categories
 - ƒ Dynamic: `/checkout`, `/docs/[[...slug]]`

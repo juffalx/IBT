@@ -1,4 +1,5 @@
-import { CATEGORIES } from '../../data/dishes'
+import Link from 'next/link'
+import { CATEGORIES, slugify } from '../../data/dishes'
 
 export default function MenuLayout({ children }) {
   return (
@@ -6,8 +7,13 @@ export default function MenuLayout({ children }) {
       <aside className="w-48 rounded-lg bg-yellow-100 p-4 shadow-md">
         <h2 className="mb-2 font-bold">Menu Categories</h2>
         <ul className="grid gap-1">
+          <li>
+            <Link href="/menu">All Dishes</Link>
+          </li>
           {CATEGORIES.map((category) => (
-            <li key={category}>{category}</li>
+            <li key={category}>
+              <Link href={`/menu/${slugify(category)}`}>{category}</Link>
+            </li>
           ))}
         </ul>
       </aside>

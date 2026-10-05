@@ -1,5 +1,9 @@
 export const CATEGORIES = ['Breakfast', 'Main Dishes', 'Drinks']
 
+export function slugify(text) {
+  return text.toLowerCase().trim().replace(/\s+/g, '-')
+}
+
 export const dishes = [
   { id: 'firfir', name: 'Injera Firfir', category: 'Breakfast', price: 180 },
   { id: 'chechebsa', name: 'Chechebsa', category: 'Breakfast', price: 150 },

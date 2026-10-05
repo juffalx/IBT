@@ -17,7 +17,7 @@ npm run build
 | Root layout owns html and body, with header, footer and `globals.css` | `src/app/layout.js`, `src/component/Header.jsx`, `src/component/Footer.jsx` |
 | Menu layout with a sidebar that persists | `src/app/menu/layout.js` |
 | `revalidate` on the menu route, build shows it static with 1h | `src/app/menu/page.js` |
-| `generateStaticParams` on the dish route, 7 pages in the build | `src/app/menu/[id]/page.js` |
+| `generateStaticParams` on `[id]`, 10 pages in the build (7 dishes and 3 categories) | `src/app/menu/[id]/page.js` |
 | Checkout forced dynamic | `src/app/checkout/layout.js`, `src/app/checkout/page.js` |
 | Dish list wrapped in Suspense | `src/app/menu/page.js`, `src/component/DishList.jsx` |
 | Every route, its strategy and why | `STRATEGY.md` |
