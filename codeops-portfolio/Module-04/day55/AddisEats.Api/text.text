@@ -1,0 +1,16 @@
+Scaffold AddisEats.Api with the four folders, delete the weather sample, and make the first
+commit.
+
+• Write the Restaurant entity and the RestaurantDto record, with a ToDto extension method
+between them.
+
+• Seed twelve restaurants across Bole, Piassa, Kazanchis and Megenagna, with realistic names
+and ETB delivery fees.
+
+• Write IRestaurantService and RestaurantService with Search and GetById, and register the
+service as scoped.
+
+• Build GET /api/v1/restaurants with optional area, page and limit, and GET /api/v1/restaurants/{id}
+returning 200 or 404.
+
+• Run the six Swagger checks from slide 21, then commit and push.
