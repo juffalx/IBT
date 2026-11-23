@@ -1,76 +1,48 @@
-# Addis Eats API
+# AddisEats.Api
 
-A RESTful Web API for managing Addis Eats restaurant menu items, built with ASP.NET Core.
+A restaurant management Web API built with **ASP.NET Core Web API** and **C#** as part of the IBT CodeOps Module 4 capstone.
 
-## Features
+## Project Setup
 
-- Retrieve all menu items.
-- Filter menu items by category.
-- Retrieve a menu item by ID.
-- Add new menu items.
-- Validate menu prices.
-- Dependency Injection using `IMenuService`.
-- Configuration using `MenuOptions`.
+- Created using ASP.NET Core Web API.
+- Configured with `--use-controllers`.
+- Removed the default WeatherForecast sample.
+- Uses controller-based API architecture.
 
-## API Endpoints
+## Run the Application
 
-Base URL: `/api/v1/menu`
-
-| Method | Endpoint                     | Description         | Success     | Failure         |
-| ------ | ---------------------------- | ------------------- | ----------- | --------------- |
-| GET    | `/api/v1/menu`               | Get all menu items  | 200 OK      | —               |
-| GET    | `/api/v1/menu?category=Main` | Filter by category  | 200 OK      | —               |
-| GET    | `/api/v1/menu/{id}`          | Get menu item by ID | 200 OK      | 404 Not Found   |
-| POST   | `/api/v1/menu`               | Create a menu item  | 201 Created | 400 Bad Request |
-
-## Example POST Request
-
-```json
-{
-  "id": 7,
-  "name": "Firfir",
-  "category": "Breakfast",
-  "price": 250
-}
-```
-
-The price must be greater than zero.
-
-## Technology
-
-- C#
-- ASP.NET Core Web API
-- Dependency Injection
-- Swagger / OpenAPI
-- LINQ
-
-## Run the Project
+Open the project directory and run:
 
 ```bash
-dotnet restore
 dotnet run
 ```
 
-Open the Swagger URL displayed in the terminal to explore and test the endpoints.
+## Swagger Documentation
+
+Swagger UI:
+
+`https://localhost:7000/swagger`
+
+> Replace this URL with your actual Swagger URL from the terminal.
 
 ## Project Structure
 
 ```text
 AddisEats.Api/
 ├── Controllers/
-│   └── MenuController.cs
 ├── Models/
-│   └── MenuItem.cs
 ├── Services/
-│   ├── IMenuService.cs
-│   └── MenuService.cs
-├── Options/
-│   └── MenuOptions.cs
+├── Data/
 ├── Program.cs
-├── appsettings.json
-└── README.md
+└── AddisEats.Api.csproj
 ```
 
-## Author
+## Project Goal
 
-Addis Eats API — CodeOps Student Mini-Project, Day 55.
+Build a restaurant management API that supports restaurant information, menus, and other restaurant-related operations.
+
+## Development Progress
+
+- [x] Exercise 1: Scaffold API and configure initial project.
+- [ ] Exercise 2: Create Restaurant entity and DTO.
+- [ ] Exercise 3: Seed restaurant data.

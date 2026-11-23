@@ -27,7 +27,7 @@ public class MenuController : ControllerBase
         var result = _menuService.GetByID(id);
         if(result == null)
         {
-            return NotFound();
+            return BadRequest();
         } 
         return Ok(result);
     }
@@ -37,6 +37,11 @@ public IActionResult CreateMenu([FromBody] MenuItem item)
 {
     try
     {
+            if (item.Price <= 0)
+            {
+                //return 400 Error 
+                BadRequest();
+            };
         var result = _menuService.Add(item);
 
         return CreatedAtAction(
